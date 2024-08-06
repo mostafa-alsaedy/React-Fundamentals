@@ -44,11 +44,13 @@ export default function Portfolio() {
                         )
                     })}
                 </div>
-                {modalVisible ? <div className='modal fixed top-0 bottom-0 right-0 left-0 bg-blue-300 bg-opacity-70'>
+                {/* {modalVisible ?  : ""} */}
+
+                <div className={`${modalVisible ? "block" : "hidden"} modal fixed top-0 bottom-0 right-0 left-0 bg-blue-300 bg-opacity-70 `}>
                     <div onClick={handleModalClick} className='flex justify-center items-center h-screen'>
                         <img src={selectedImg} className=' cursor-pointer rounded-xl' width={600} alt="" />
                     </div>
-                </div> : ""}
+                </div>
             </div>
         </>
     );
